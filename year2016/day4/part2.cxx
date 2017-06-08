@@ -25,8 +25,9 @@ int main() {
         p = s.find('[');
         int ID = stoi(s.substr(pos, p-pos+1));
         priority_queue<int> pq;
-        for (int &i : counter)
+        for (int &i : counter) {
             pq.push(i);
+        }
         bool is_real = true;
         for (size_t i = p+1; i < s.size() - 1; ++i) {
             if (counter[s[i]-'a'] != pq.top()) {
