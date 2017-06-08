@@ -13,12 +13,15 @@ int main() {
     int a, b, c;
     int i = 0;
     while(cin >> a >> b >> c) {
-        if (a + b <= c)
+        if (a + b <= c) {
             continue;
-        if (a + c <= b)
+        }
+        if (a + c <= b) {
             continue;
-        if (c + b <= a)
+        }
+        if (c + b <= a) {
             continue;
+        }
         i++;
     }
     cout << i;

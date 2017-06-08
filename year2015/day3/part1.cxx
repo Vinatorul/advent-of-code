@@ -31,8 +31,9 @@ int main() {
                     y--;
                     break;
             }
-            if (st.count(mp(x, y)) == 0)
+            if (st.count(mp(x, y)) == 0) {
                 st.insert(mp(x, y));
+            }
         }
     }
     cout << st.size() << endl;

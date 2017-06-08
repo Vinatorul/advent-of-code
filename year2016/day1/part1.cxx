@@ -18,13 +18,15 @@ int main() {
         switch (s[0]) {
             case 'R':
                 swap(dx, dy);
-                if (dy != 0)
+                if (dy != 0) {
                     dy = -dy;
+                }
             break;
             case 'L':
                 swap(dx, dy);
-                if (dx != 0)
+                if (dx != 0) {
                     dx = -dx;
+                }
             break;
         }
         x += dx*val;

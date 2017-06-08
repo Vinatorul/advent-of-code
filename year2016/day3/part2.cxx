@@ -8,12 +8,15 @@ using namespace std;
 const int INF = 1e9 + 1;
 
 int check_tr(int a, int b, int c) {
-    if (a + b <= c)
+    if (a + b <= c) {
         return 0;
-    if (a + c <= b)
+    }
+    if (a + c <= b) {
         return 0;
-    if (c + b <= a)
+    }
+    if (c + b <= a) {
         return 0;
+    }
     return 1;
 }
 
@@ -25,8 +28,9 @@ int main() {
     while(cin >> a[0] >> a[1] >> a[2]) {
         cin >> b[0] >> b[1] >> b[2];
         cin >> c[0] >> c[1] >> c[2];
-        for (int j = 0; j < 3; ++j)
+        for (int j = 0; j < 3; ++j) {
             i += check_tr(a[j], b[j], c[j]);
+        }
     }
     cout << i;
     return 0;

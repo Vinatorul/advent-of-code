@@ -16,19 +16,21 @@ int main() {
     int x(0), y(0);
     pos.insert(mp(x, y));
     int dx(1), dy(0);
-    vector<pair<char, int>> instructions; 
+    vector<pair<char, int>> instructions;
     while (cin >> s) {
         int val = stoi(s.substr(1, s.size() - 1));
         switch (s[0]) {
             case 'R':
                 swap(dx, dy);
-                if (dy != 0)
+                if (dy != 0) {
                     dy = -dy;
+                }
             break;
             case 'L':
                 swap(dx, dy);
-                if (dx != 0)
+                if (dx != 0) {
                     dx = -dx;
+                }
             break;
         }
         int tx = x + dx*val;

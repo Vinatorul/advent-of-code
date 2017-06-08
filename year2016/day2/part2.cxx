@@ -18,30 +18,33 @@ const char keypad[5][5] = {
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int x, y;
     string s;
     while (cin >> s) {
-        x = 1;
-        y = 1;
-        for (char c : s)
+        int x(1), y(1);
+        for (char c : s) {
             switch (c) {
                 case 'U':
-                    if (y > 0 && keypad[y-1][x])
+                    if (y > 0 && keypad[y-1][x]) {
                         y--;
+                    }
                 break;
                 case 'R':
-                    if (x < 4 && keypad[y][x+1])
+                    if (x < 4 && keypad[y][x+1]) {
                         x++;
+                    }
                 break;
                 case 'D':
-                    if (y < 4 && keypad[y+1][x])
+                    if (y < 4 && keypad[y+1][x]) {
                         y++;
+                    }
                 break;
                 case 'L':
-                    if (x > 0 && keypad[y][x-1])
+                    if (x > 0 && keypad[y][x-1]) {
                         x--;
+                    }
                 break;
             }
+        }
         cout << keypad[y][x];
     }
     return 0;

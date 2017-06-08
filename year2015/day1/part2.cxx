@@ -13,9 +13,10 @@ int main() {
     string s;
     cin >> s;
     int ctr(0);
-    for (int i = 0; i < s.size(); ++i)
-        if (s[i] == '(')
+    for (int i = 0; i < s.size(); ++i) {
+        if (s[i] == '(') {
             ctr++;
+        }
         else {
             ctr--;
             if (ctr < 0) {
@@ -23,6 +24,7 @@ int main() {
                 return 0;
             }
         }
+    }
     cout << ctr << endl;
     return 0;
 }

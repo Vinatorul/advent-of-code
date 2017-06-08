@@ -17,16 +17,18 @@ int main() {
         size_t pos = 0;
         vector<int> counter(26, 0);
         while (p != string::npos) {
-            for(; pos < p; ++pos)
+            for(; pos < p; ++pos) {
                 counter[s[pos] - 'a']++;
+            }
             pos = p+1;
             p = s.find('-', pos);
         }
         p = s.find('[');
-        int ID = stoi(s.substr(pos, p-pos+1));  
+        int ID = stoi(s.substr(pos, p-pos+1));
         priority_queue<int> pq;
-        for (int &i : counter)
+        for (int &i : counter) {
             pq.push(i);
+        }
         bool is_real = true;
         for (size_t i = p+1; i < s.size() - 1; ++i) {
             if (counter[s[i]-'a'] != pq.top()) {
@@ -35,8 +37,9 @@ int main() {
             }
             pq.pop();
         }
-        if (is_real)
+        if (is_real) {
             sum += ID;
+        }
     }
     cout << sum << endl;
     return 0;
