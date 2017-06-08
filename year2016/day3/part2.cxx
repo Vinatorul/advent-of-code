@@ -25,7 +25,7 @@ int main() {
     cin.tie(0);
     int a[3], b[3], c[3];
     int i = 0;
-    while(cin >> a[0] >> a[1] >> a[2]) {
+    while (cin >> a[0] >> a[1] >> a[2]) {
         cin >> b[0] >> b[1] >> b[2];
         cin >> c[0] >> c[1] >> c[2];
         for (int j = 0; j < 3; ++j) {

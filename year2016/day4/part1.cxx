@@ -17,7 +17,7 @@ int main() {
         size_t pos = 0;
         vector<int> counter(26, 0);
         while (p != string::npos) {
-            for(; pos < p; ++pos) {
+            for (; pos < p; ++pos) {
                 counter[s[pos] - 'a']++;
             }
             pos = p+1;

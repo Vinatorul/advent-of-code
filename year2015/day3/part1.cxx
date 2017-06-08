@@ -15,9 +15,9 @@ int main() {
     int x(0), y(0);
     st.insert(mp(x, y));
     string s;
-    while(cin >> s) {
+    while (cin >> s) {
         for (int i = 0; i < s.size(); ++i) {
-            switch(s[i]) {
+            switch (s[i]) {
                 case '<':
                     x--;
                     break;

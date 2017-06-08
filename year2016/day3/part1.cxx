@@ -12,7 +12,7 @@ int main() {
     cin.tie(0);
     int a, b, c;
     int i = 0;
-    while(cin >> a >> b >> c) {
+    while (cin >> a >> b >> c) {
         if (a + b <= c) {
             continue;
         }
